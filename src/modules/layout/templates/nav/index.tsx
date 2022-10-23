@@ -12,26 +12,26 @@ import { useEffect, useState } from "react"
 const Nav = () => {
   const { pathname } = useRouter()
   const [isHome, setIsHome] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(true)
 
   //useEffect that detects if window is scrolled > 5px on the Y axis
-  useEffect(() => {
-    if (isHome) {
-      const detectScrollY = () => {
-        if (window.scrollY > 5) {
-          setIsScrolled(true)
-        } else {
-          setIsScrolled(false)
-        }
-      }
+  // useEffect(() => {
+  //   if (isHome) {
+  //     const detectScrollY = () => {
+  //       if (window.scrollY > 5) {
+  //         setIsScrolled(true)
+  //       } else {
+  //         setIsScrolled(false)
+  //       }
+  //     }
 
-      window.addEventListener("scroll", detectScrollY)
+  //     window.addEventListener("scroll", detectScrollY)
 
-      return () => {
-        window.removeEventListener("scroll", detectScrollY)
-      }
-    }
-  }, [isHome])
+  //     return () => {
+  //       window.removeEventListener("scroll", detectScrollY)
+  //     }
+  //   }
+  // }, [isHome])
 
   useEffect(() => {
     pathname === "/" ? setIsHome(true) : setIsHome(false)
@@ -61,27 +61,24 @@ const Nav = () => {
             }
           )}
         >
-          <div className="flex-1 basis-0 h-full flex items-center">
+          {/* <div className="flex-1 basis-0 h-full flex items-center">
             <div className="block small:hidden">
               <Hamburger setOpen={toggle} />
             </div>
             <div className="hidden small:block h-full">
               <DropdownMenu />
             </div>
-          </div>
+          </div> */}
 
           <div className="flex items-center h-full">
             <Link href="/">
-              <a className="text-xl-semi uppercase">Acme</a>
+              <a className="text-xl-semi uppercase">The Fresh Dish</a>
             </Link>
           </div>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && <DesktopSearchModal />}
-              <Link href="/account">
-                <a>Account</a>
-              </Link>
             </div>
             <CartDropdown />
           </div>

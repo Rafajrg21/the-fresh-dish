@@ -20,6 +20,7 @@ const fetchCollection = async (id: string) => {
   return await medusaClient.collections.retrieve(id).then(({ collection }) => ({
     id: collection.id,
     title: collection.title,
+    metadata: collection.metadata
   }))
 }
 

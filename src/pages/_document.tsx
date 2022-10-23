@@ -15,6 +15,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
             rel="stylesheet"
           />
+          <script src="https://kit.fontawesome.com/809f0cb128.js" crossOrigin="anonymous"></script>
         </Head>
         <body>
           <Main />
