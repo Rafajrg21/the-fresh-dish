@@ -47,5 +47,9 @@ yarn dev
 
 ## Resources
 
+The only resources I needed was the amazing documentation of Medusa
 - [Medusa’s GitHub repository](https://github.com/medusajs/medusa)
-- [How to Create Services](https://docs.medusajs.com/advanced/backend/services/create-service)
+- [Quickstart](https://docs.medusajs.com/quickstart/quick-start/)
+
+And this blog which helped a lot as well!
+- [How to build a video game store with medusa and nextjs](https://dev.to/medusajs/how-to-build-a-video-game-store-with-medusa-and-nextjs-kem)
